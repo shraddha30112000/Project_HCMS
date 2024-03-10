@@ -1,11 +1,11 @@
-package com.amigos.dao;
+package com.amigos.services;
 
 import java.util.List;
 
 import com.amigos.entities.Employees;
 
-public interface EmployeesDAO {
-	List<Employees> getAllEmployees();
+public interface EmployeesService {
+List<Employees> getAllEmployees();
 	
 	void addEmployee(Employees employee);
 	

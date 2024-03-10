@@ -8,18 +8,40 @@ import org.springframework.stereotype.Service;
 import com.amigos.dao.EmployeesDAO;
 import com.amigos.entities.Employees;
 
-import jakarta.transaction.Transactional;
-
 @Service
-@Transactional
-public class EmployeesServiceImpl implements EmployeeService{
+public class EmployeesServiceImpl implements EmployeesService{
 
 	@Autowired
 	private EmployeesDAO employeesDAO;
+
 	@Override
 	public List<Employees> getAllEmployees() {
+		return employeesDAO.getAllEmployees();
+	}
+
+	@Override
+	public void addEmployee(Employees employee) {
+		employeesDAO.addEmployee(employee);
+	}
+
+	@Override
+	public void updateEmployee(Employees employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteEmployee(int employeeId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employees getEmployeeById(int employeeId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
 
 }
