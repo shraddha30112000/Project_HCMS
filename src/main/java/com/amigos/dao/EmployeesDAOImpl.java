@@ -30,19 +30,17 @@ public class EmployeesDAOImpl implements EmployeesDAO{
 
 	@Override
 	public void updateEmployee(Employees employee) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(employee);
 	}
 
 	@Override
-	public void deleteEmployee(int employeeId) {
-		// TODO Auto-generated method stub
+	public void deleteEmployee(Employees employee) {
 		
+		entityManager.unwrap(Session.class).remove(employee);
 	}
 
 	@Override
 	public Employees getEmployeeById(int employeeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Employees.class, employeeId);
 	}
 }
