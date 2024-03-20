@@ -35,7 +35,6 @@ public class EmployeesDAOImpl implements EmployeesDAO{
 
 	@Override
 	public void deleteEmployee(Employees employee) {
-		
 		entityManager.unwrap(Session.class).remove(employee);
 	}
 

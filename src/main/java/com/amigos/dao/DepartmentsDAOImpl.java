@@ -27,4 +27,19 @@ public class DepartmentsDAOImpl implements DepartmentsDAO{
 		entityManager.unwrap(Session.class).saveOrUpdate(department);
 	}
 
+	@Override
+	public void updateDepartments(Departments departments) {
+		entityManager.unwrap(Session.class).merge(departments);
+	}
+
+	@Override
+	public void deleteDepartments(int departmentId) {
+		entityManager.unwrap(Session.class).remove(departmentId);
+	}
+
+	@Override
+	public Departments getDepartmentsById(int departmentId) {
+		return entityManager.unwrap(Session.class).get(Departments.class, departmentId);
+	}
+
 }

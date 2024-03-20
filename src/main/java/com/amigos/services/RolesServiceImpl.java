@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.amigos.dao.RolesDAO;
-import com.amigos.entities.Employees;
 import com.amigos.entities.Roles;
 
 @Service
@@ -27,20 +26,17 @@ public class RolesServiceImpl implements RolesService{
 
 	@Override
 	public void updateRole(Roles role) {
-		// TODO Auto-generated method stub
-		
+		rolesDAO.updateRole(role);
 	}
 
 	@Override
 	public void deleteRole(int roleId) {
-		// TODO Auto-generated method stub
-		
+		rolesDAO.deleteRole(roleId);
 	}
 
 	@Override
-	public Employees getRoleById(int roleId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Roles getRoleById(int roleId) {
+		return rolesDAO.getRoleById(roleId);
 	}
 
 }

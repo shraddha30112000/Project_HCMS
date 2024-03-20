@@ -9,7 +9,7 @@ import com.amigos.dao.DepartmentsDAO;
 import com.amigos.entities.Departments;
 
 @Service
-public class DepartmentsServiceImpl implements DepartmentsService {
+public class DepartmentsServiceImpl implements DepartmentsService{
 	
 	@Autowired
 	private DepartmentsDAO departmentsDAO;
@@ -26,20 +26,17 @@ public class DepartmentsServiceImpl implements DepartmentsService {
 
 	@Override
 	public void updateDepartment(Departments department) {
-		// TODO Auto-generated method stub
-		
+		departmentsDAO.updateDepartments(department);
 	}
 
 	@Override
 	public void deleteDepartment(int departmentId) {
-		// TODO Auto-generated method stub
-		
+		departmentsDAO.deleteDepartments(departmentId);
 	}
 
 	@Override
 	public Departments getDepartmentById(int departmentId) {
-		// TODO Auto-generated method stub
-		return null;
+		return departmentsDAO.getDepartmentsById(departmentId);
 	}
 
 }

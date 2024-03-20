@@ -36,7 +36,6 @@ public class EmployeesServiceImpl implements EmployeesService{
 
 	@Override
 	public Employees getEmployeeById(int employeeId) {
-		
 		return employeesDAO.getEmployeeById(employeeId);
 	}
 }

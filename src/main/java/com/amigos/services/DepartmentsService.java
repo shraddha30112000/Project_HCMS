@@ -15,4 +15,5 @@ List<Departments> getAllDepartments();
 	void deleteDepartment(int departmentId);
 	
 	Departments getDepartmentById(int departmentId);
+
 }
